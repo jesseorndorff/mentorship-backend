@@ -1,0 +1,105 @@
+{% extends 'admin/base.html'%}
+{% block content %}
+<h1 class="text-center"><strong>Create User</strong> </h1>
+<a href="/admin" rel="noopener noreferrer">
+    <p class="text-center">Later...</p>
+</a>
+<div class="card mx-auto" style="width: 40rem;">
+    <div class="card-body shadow">
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" required name="name" required="1">
+            </div>
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" class="form-control" required name="username" required="1">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" required name="password" id="exampleInputPassword1">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" required name="password1" id="exampleInputPassword1">
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" class="form-control" required name="email" required="1">
+            </div>
+            <div class="form-group">
+                <label>Bio</label>
+                <textarea type="text" class="form-control" name="bio"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Profile Image</label>
+                <input type="file" class="form-control-file" name="file" id="exampleFormControlFile1">
+            </div>
+            <div class="form-group">
+                <label>Skills</label>
+                <textarea type="text" class="form-control" name="skills"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Location</label>
+                <input type="text" class="form-control" name="location">
+            </div>
+
+            <div class="form-group">
+                <label>Occupation</label>
+                <input type="text" class="form-control" name="occupation" >
+            </div>
+
+            <div class="form-group">
+                <label>Organization</label>
+                <input type="text" class="form-control" name="organization" >
+            </div>
+
+            <div class="form-group">
+                <label>Interests</label>
+                <input type="text" class="form-control" name="interests" >
+            </div>
+            <div class="form-group">
+                Need Mentoring :
+            <select name="need_mentoring" class="btn-outline-secondary btn-sm" id="mySelect">
+                <option value="True">Yes, I want mentor </option>
+                <option value="False">No, need for mentor</option>
+            </select>
+            </div>
+            <div class="form-group">
+                Available To Mentor :
+            <select name="available_to_mentor" class="btn-outline-secondary btn-sm" id="mySelect1">
+                <option value="True">Yes, I'm available for mentor </option>
+                <option value="False">No, I need mentor</option>
+            </select>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-check">
+                        <input class="form-check-input" name="is_admin" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Is Admin
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-check">
+                        <input class="form-check-input" name="email_verified"  type="checkbox" value="">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Email verified
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" name="terms_and_conditions"  type="checkbox" value="">
+                <label class="form-check-label" for="defaultCheck1">
+                    Terms & Conditions Checked
+                </label>
+            </div>
+
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
